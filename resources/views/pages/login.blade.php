@@ -41,7 +41,7 @@
     class="min-h-screen flex flex-col md:flex-row items-center justify-center text-white p-4 overflow-hidden bg-gradient-to-r from-[#E70AF9] to-[#3452B4]">
 
     <!-- Left side: Logo & Title -->
-    <div class="w-full md:w-1/2 p-8 flex flex-col justify-center items-start relative z-10">
+    <div class="w-full md:w-1/2 p-8 flex flex-col justify-center items-start relative z-10 md:ml-12">
       <img src="/assets/logo CDIAsia.svg" alt="CDIAsia" class="w-24 md:w-52 mx-auto md:mx-0">
       <img class="my-11 hidden md:block" src="/assets/title.svg" alt="PROJECT TRACKING">
       <img class="my-5 block md:hidden" src="/assets/title mobile.svg" alt="PROJECT TRACKING">
