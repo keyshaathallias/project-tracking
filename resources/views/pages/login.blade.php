@@ -17,13 +17,13 @@
 
 <body class="font-montserrat">
   <div class="hidden md:block">
-    <div class="absolute -bottom-10 -left-0">
+    <div class="absolute bottom-0 left-0">
       <img src="/assets/shape-b-l.svg">
     </div>
     <div class="absolute -top-5 left-110">
       <img src="/assets/shape-t-m.svg">
     </div>
-    <div class="absolute -top-14 -right-0">
+    <div class="absolute -top-14 right-0">
       <img src="/assets/shape-t-r.svg">
     </div>
   </div>
@@ -32,7 +32,7 @@
     <div class="absolute -top-15 right-0">
       <img src="/assets/shape-t-r mb.svg">
     </div>
-    <div class="absolute -bottom-0 -left-12">
+    <div class="absolute bottom-0 -left-12">
       <img src="/assets/shape-b-l mb.svg">
     </div>
   </div>
