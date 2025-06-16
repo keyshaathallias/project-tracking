@@ -137,6 +137,7 @@
           </div>
           <div class="pt-2">
             <button
+              id="seeDetailButton"
               class="flex items-center gap-2 border border-primary text-primary px-4 py-1.5 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" class="w-4 h-4">
                 <path
@@ -149,4 +150,96 @@
       </div>
     </div>
   </div>
+  <!-- See Detail Modal -->
+  <div id="seeDetailModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50 transition-opacity duration-300 opacity-0">
+    <div class="bg-white rounded-xl p-8 w-full max-w-2xl transform transition-transform duration-300 scale-95 shadow-lg">
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-bold text-dark-blue">Revision Title</h2>
+        <button id="closeDetailModal" class="text-gray-500 hover:text-gray-800">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-4 text-dark-blue">
+        <p class="text-primary md:col-span-1">Priority</p>
+        <p class="md:col-span-2 font-semibold">High</p>
+
+        <p class="text-primary md:col-span-1">Description</p>
+        <p class="md:col-span-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <p class="text-primary md:col-span-1">Attachment</p>
+        <div class="md:col-span-2 space-y-2">
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" />
+            </svg>
+            <span>file_name</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg text-gray-400" viewBox="0 0 16 16">
+                <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+                <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z" />
+              </svg>
+            <span>link</span>
+          </div>
+        </div>
+
+        <p class="text-primary md:col-span-1">Status</p>
+        <p class="md:col-span-2">On Progress</p>
+      </div>
+    </div>
+  </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const seeDetailButton = document.getElementById('seeDetailButton');
+    const seeDetailModal = document.getElementById('seeDetailModal');
+    const closeDetailModal = document.getElementById('closeDetailModal');
+
+    const openModal = () => {
+      seeDetailModal.classList.remove('hidden');
+      seeDetailModal.classList.add('flex');
+      setTimeout(() => {
+        seeDetailModal.classList.remove('opacity-0');
+        seeDetailModal.querySelector('.transform').classList.remove('scale-95');
+      }, 10);
+    };
+
+    const closeModal = () => {
+      seeDetailModal.classList.add('opacity-0');
+      seeDetailModal.querySelector('.transform').classList.add('scale-95');
+      setTimeout(() => {
+        seeDetailModal.classList.add('hidden');
+        seeDetailModal.classList.remove('flex');
+      }, 300);
+    };
+
+    if (seeDetailButton) {
+      seeDetailButton.addEventListener('click', openModal);
+    }
+
+    if (closeDetailModal) {
+      closeDetailModal.addEventListener('click', closeModal);
+    }
+
+    if (seeDetailModal) {
+      seeDetailModal.addEventListener('click', function (event) {
+        if (event.target === seeDetailModal) {
+          closeModal();
+        }
+      });
+    }
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && !seeDetailModal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+  });
+</script>
+
 @endsection
