@@ -77,7 +77,8 @@
         <p class="text-dark text-opacity-80 mb-6 text-sm md:text-base">Input your email and password.</p>
 
         {{-- Form Login --}}
-        <form method="POST" class="w-full px-4">
+        <form method="POST" action="{{ route('login.submit') }}" class="w-full px-4">
+    @csrf
           <input type="email" name="email" id="email"
             class="bg-light w-full px-6 py-4 border border-light-gray rounded-[10px] text-primary font-semibold text-sm focus:outline-2 focus:outline-primary focus:border-primary"
             placeholder="Email" />
