@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\InquiryController;
 use App\Http\Controllers\Auth\AuthController;
 
 Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
@@ -12,17 +13,15 @@ Route::middleware(['auth', 'role:client'])->group(function () {
     Route::get('/dashboard', function () {
         return view('client.pages.dashboard');
     });
-    Route::get('/projects', function () {
-        return view('client.pages.projects');
-    });
+    Route::resource('projects', ProjectController::class);
     Route::get('/detail-project', function () {
         return view('client.pages.detailProject');
     });
     Route::get('/inquiry', function () {
         return view('client.pages.inquiry');
     });
-    Route::get('/create-inquiry', function () {
-        return view('client.pages.createInquiry');
+    Route::get('/profile', function () {
+        return view('client.pages.profile');
     });
 });
 
@@ -33,18 +32,18 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     // Tambah route admin lain di sini
 });
 
-Route::get('/projects', function () {
-    return view('client.pages.projects');
-});
+// Route::get('/projects', function () {
+//     return view('client.pages.projects');
+// });
 
-Route::get('/detail-project', function () {
-    return view('client.pages.detailProject');
-});
+// Route::get('/detail-project', function () {
+//     return view('client.pages.detailProject');
+// });
 
-Route::get('/inquiry', function () {
-    return view('client.pages.inquiry');
-});
+// Route::get('/inquiry', function () {
+//     return view('client.pages.inquiry');
+// });
 
-Route::get('/create-inquiry', function () {
-    return view('client.pages.createInquiry');
-});
+// Route::get('/create-inquiry', function () {
+//     return view('client.pages.createInquiry');
+// });
