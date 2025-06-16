@@ -1,4 +1,4 @@
-<nav class="fixed -bottom-1 left-0 right-0 z-50 bg-white shadow md:hidden">
+<nav class="fixed -bottom-2 left-0 right-0 z-50 bg-white shadow md:hidden">
   <div class="flex justify-around items-center h-20">
     <!-- Dashboard -->
     <a href="/dashboard"

@@ -36,14 +36,23 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 //     return view('client.pages.projects');
 // });
 
-// Route::get('/detail-project', function () {
-//     return view('client.pages.detailProject');
-// });
+Route::get('/project-detail', function () {
+    return view('client.pages.projectDetail');
+});
 
 // Route::get('/inquiry', function () {
 //     return view('client.pages.inquiry');
 // });
 
-// Route::get('/create-inquiry', function () {
-//     return view('client.pages.createInquiry');
-// });
+Route::get('/create-inquiry', function () {
+    return view('client.pages.createInquiry');
+});
+
+Route::get('/inquiry-detail', function () {
+    return view('client.pages.inquiryDetail');
+});
+
+Route::get('/payment', function () {
+    return view('client.pages.payment');
+});
+

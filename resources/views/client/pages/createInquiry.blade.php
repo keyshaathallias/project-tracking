@@ -109,7 +109,7 @@
             Cancel
           </a>
           <button type="submit"
-            class="w-40 bg-gradient-to-r from-[#4598F2] to-[#1A76D8] px-0 flex items-center justify-center text-white rounded-full py-3 font-medium">
+            class="w-40 bg-gradient-to-r from-[#4598F2] to-[#1A76D8] px-0 flex items-center justify-center text-white rounded-full py-3 font-medium hover:opacity-90 transition duration-200 ease-in-out">
             Submit
           </button>
         </div>

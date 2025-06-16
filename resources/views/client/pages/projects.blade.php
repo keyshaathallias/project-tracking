@@ -17,11 +17,11 @@
   </h2>
 
   {{-- Categories --}}
-  <div class="">
+  <div>
     <div class="flex gap-4 my-5 flex-wrap">
       <a href=""
         class="px-4 py-2 rounded-full font-medium whitespace-nowrap shadow transition duration-200 ease-in-out
-      bg-gradient-to-r from-[#4598F2] to-[#1A76D8] text-white">
+      bg-gradient-to-r from-secondary to-[#B43D3D] text-white">
         All Projects
       </a>
       <a href=""
