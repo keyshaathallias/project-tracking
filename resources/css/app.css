@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+@source "../views";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme{
+    --font-montserrat: "Montserrat", "sans-serif";
+
+    --color-primary: #3A59A6;
+    --color-secondary: #C35858;
+    --color-dark-blue: #252150;
+    --color-dusty-blue: #5B7AC6;
+    --color-light-blue: #C0D2FF;
+    --color-lighter-blue: #F2F7FF;
+    --color-red: #D12533;
+    --color-yellow: #EEB519;
+    --color-green: #4DB862;
+    --color-light-green: #7DAE86;
+    --color-dark: #000000;
+    --color-medium-gray: #8D8D8D;
+    --color-gray: #686868;
+    --color-light-gray: #C4C4C4;
+    --color-light: #FFFFFF;
+    --color-violet: #E70AF9;
+    --gradient-violet-blue: linear-gradient(to right, #E70AF9, #3452B4);
+    --gradient-blue: linear-gradient(to right, #4598F2, #1A76D8);
+    --gradient-red: linear-gradient(to right, #C35858, #B43D3D);
+}
