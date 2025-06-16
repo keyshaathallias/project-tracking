@@ -19,7 +19,7 @@
       </h2>
 
       {{-- Categories --}}
-      <div class="">
+      <div>
         <div class="flex gap-4 my-5 flex-wrap">
           <a href=""
             class="px-4 py-2 rounded-full font-medium whitespace-nowrap shadow transition duration-200 ease-in-out
